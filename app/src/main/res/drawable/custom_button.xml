@@ -1,0 +1,18 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="#03AED2" /> <!-- Màu nền xanh khi chuột vào -->
+            <stroke
+                android:width="2dp" android:color="#03AED2" /> <!-- Màu viền -->
+            <corners android:radius="4dp" /> <!-- Bán kính bo tròn cho các góc -->
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="#FFFFFF" /> <!-- Màu trắng ở giữa -->
+            <stroke
+                android:width="2dp" android:color="#03AED2" /> <!-- Màu viền -->
+            <corners android:radius="4dp" /> <!-- Bán kính bo tròn cho các góc -->
+        </shape>
+    </item>
+</selector>

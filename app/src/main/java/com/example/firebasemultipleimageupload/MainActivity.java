@@ -60,8 +60,7 @@ public class MainActivity extends AppCompatActivity {
                         if(arrayList.size() <= 1)
                         {
                             tvCountImages.setText(MessageFormat.format("{0} Image selected.", arrayList.size()));
-                        }else
-                        tvCountImages.setText(MessageFormat.format("{0} Images selected.", arrayList.size()));
+                        }else  tvCountImages.setText(MessageFormat.format("{0} Images selected.", arrayList.size()));
                     }
                 }
 

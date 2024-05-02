@@ -1,6 +1,8 @@
 package com.example.firebasemultipleimageupload;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -37,7 +39,12 @@ public class ShowImagesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show_images);
         RecyclerView recyclerView = findViewById(R.id.recycler);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+        actionBar.setTitle("List Images");
+        int customColor = Color.parseColor("#03AED2"); // Màu custom (ví dụ: đỏ)
+        ColorDrawable colorDrawable = new ColorDrawable(customColor);
+        actionBar.setBackgroundDrawable(colorDrawable);
+
+        //actionBar.hide();
 
 
         FirebaseStorage.getInstance().getReference().child("images").listAll().addOnSuccessListener(new OnSuccessListener<ListResult>() {
@@ -57,12 +64,12 @@ public class ShowImagesActivity extends AppCompatActivity {
                     public void onDeleteClick(Image image) {
                         StorageReference storageRef = FirebaseStorage.getInstance().getReference();
                         StorageReference imageRef = storageRef.child("images").child(image.getName());
-                        System.out.println(imageRef);
 
                         imageRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
                                         arrayList.remove(image);
+                                        Toast.makeText(ShowImagesActivity.this, "Deleted ! ", Toast.LENGTH_SHORT).show();
                                         adapter.notifyDataSetChanged();
                                     }
                                 })

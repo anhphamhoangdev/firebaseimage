@@ -8,21 +8,38 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@+id/tvMidterm"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="110dp"
+        android:text="Group member :\n1)Pham Hoang Anh - 21110753 \n2)Dinh Huu Quang Anh - 21110752 \n3)Dang Hieu Anh - 21110751"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvMidterm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/selectImages"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="114dp"
         android:text="MIDTERM PROJECT"
-        android:textStyle="bold"
+        android:textColor="@color/black"
         android:textSize="30dp"
+        android:textStyle="bold"
+
         />
+
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:id="@+id/selectImages"
         android:text="Select Images"
+        android:textColor="#03AED2"
+        android:background="@drawable/custom_button"
         />
 
     <TextView
@@ -35,21 +52,25 @@
         />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/selectImages"
         android:layout_centerHorizontal="true"
         android:id="@+id/uploadImages"
         android:text="Upload Images"
         android:enabled="false"
+        android:background="@drawable/upload_image_button"
+        android:textColor="@color/white"
         android:layout_margin="10dp"
         />
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/uploadImages"
         android:layout_centerHorizontal="true"
         android:id="@+id/showImages"
         android:text="Show Images"
+        android:background="@drawable/custom_button"
+        android:textColor="#03AED2"
         />
 </RelativeLayout>

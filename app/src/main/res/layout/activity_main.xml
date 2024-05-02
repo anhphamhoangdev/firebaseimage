@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/selectImages"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="150dp"
+        android:text="MIDTERM PROJECT"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/selectImages"
+        android:text="Select Images"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:id="@+id/selectedTV"
+        android:layout_above="@+id/selectImages"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectImages"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/uploadImages"
+        android:text="Upload Images"
+        android:enabled="false"
+        android:layout_margin="10dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/uploadImages"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/showImages"
+        android:text="Show Images"
+        />
+</RelativeLayout>
